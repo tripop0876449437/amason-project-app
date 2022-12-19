@@ -9,3 +9,4 @@
 6.Add Routing
 7.Create Node Server
 8.Fetch Products
+9.Manage State By Reducer Hook
