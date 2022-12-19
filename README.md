@@ -8,3 +8,4 @@
 5.List Products
 6.Add Routing
 7.Create Node Server
+8.Fetch Products
