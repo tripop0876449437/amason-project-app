@@ -29,9 +29,11 @@ main {
   width: 100%;
   max-width: 300px;
 }
+
 .rating span {
   color: #ffc000;
 }
+
 .product-info {
   padding: 1rem;
 }

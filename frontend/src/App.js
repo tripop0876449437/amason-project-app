@@ -11,8 +11,8 @@ import { Store } from './Store';
 import CartScreen from './screens/CartScreen';
 
 function App() {
-  const {state} = useContext(Store);
-  const {cart} = state;
+  const { state } = useContext(Store);
+  const { cart } = state;
   return (
     <BrowserRouter>
       <div className='d-flex flex-column site-container'>
