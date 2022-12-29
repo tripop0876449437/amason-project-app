@@ -2,6 +2,8 @@ import express from "express";
 import data from "./data.js";
 import mongoose from "mongoose";
 import dotenv from 'dotenv';
+import seedRouter from "./routes/seedRoutes.js";
+import productRouter from "./routes/productRoutes.js";
 
 dotenv.config();
 
@@ -15,7 +17,8 @@ mongoose
   });
 
 const app = express();
-//test
+app.use('/api/seed', seedRouter);
+app.use('/api/products', productRouter)
 app.get('/api/products', (req, res) => {
   res.send(data.products);
 });
@@ -28,7 +31,7 @@ app.get('/api/products/slug/:slug', (req, res) => {
   }
 });
 app.get('/api/products/:id', (req, res) => {
-  const product = data.products.find(x => x._id=== req.params.id);
+  const product = data.products.find((x) => x._id=== req.params.id);
   if(product){
     res.send(product);
   }else{
